@@ -10,16 +10,6 @@ module LawlerIpsum
 		"reaches deep, deep down and lays out"
 	]
 	
-	def self.better_words(number = 100)
-		lines = []
-		File.open(File.dirname(__FILE__) << '/wrestlers.txt').each_line do |line|
-			lines << line.gsub!(/\n/, " ")
-		end
-
-		lines.shuffle.join("")
-				
-	end
-
 	def self.pick_wrestler
 		wrestlers = []
 		File.open(File.dirname(__FILE__) << '/wrestlers.txt').each_line do |line|
@@ -38,15 +28,17 @@ module LawlerIpsum
 		moves.sample
 	end
 	
-	def self.yet_better()
-		pick_wrestler + " " + @@verbs.sample + " " + pick_wrestler + " with a " + pick_move + "!"
-		# select from verb
-		# select from wrestler name array
-		# with a
-		# select from moves
+	def self.yet_better(number)
+		output = ""
+		number.times do
+			output += pick_wrestler + " "
+			output += @@verbs.sample + " "
+			output += pick_wrestler + " "
+			output += "with a " + pick_move
+			output += "! "
+		end
+		output
 	end
-
-
 
 	private
 
@@ -59,4 +51,4 @@ module LawlerIpsum
 end
 
 
-puts LawlerIpsum.yet_better
+puts LawlerIpsum.yet_better(30)
