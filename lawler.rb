@@ -1,29 +1,5 @@
 module LawlerIpsum
 
-	def self.words(number = 20)	
-		# loader = Loader.new
-		array = [
-				"Macho Man",
-				"Bobby Heenan",
-				"Crush",
-				"Dingo Warrior",
-				"Lodi",
-				"the Yet-ay",
-				"Shockmaster",
-				"Ohhh.... yeaaaahhh",
-				"headbut"
-		]
-
-		output = ""
-
-		number.times do 
-			output += array.sample + " "
-		end
-
-		output
-
-	end
-
 	@@verbs = [
 		"smacks",
 		"hits",
