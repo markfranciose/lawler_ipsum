@@ -1,7 +1,9 @@
 require 'sinatra'
+require_relative 'lawler'
 
 get '/' do
-	"Hello World!"
+	@paragraph = LawlerIpsum.yet_better(30)
+	erb :lawler 
 end
 
 
