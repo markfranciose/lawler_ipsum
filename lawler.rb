@@ -42,6 +42,7 @@ module LawlerIpsum
 	end
 	
 	def self.yet_better(number)
+		# add logic for the pick_wrestler being the same.
 		output = ""
 		number.times do
 			output += pick_wrestler + " "

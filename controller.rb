@@ -6,4 +6,8 @@ get '/' do
 	erb :lawler 
 end
 
+get '/text' do
+	LawlerIpsum.yet_better(10)
+end
+
 
