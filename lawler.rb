@@ -9,6 +9,19 @@ module LawlerIpsum
 		"counters",
 		"reaches deep, deep down and lays out"
 	]
+
+	@@anytime = [
+		"What a slobberknocker!",
+		"That had to hurt!",
+		"My gawd!",
+		"Oh come on now!",
+		"Did the ref not see that?!",
+		"What a match!",
+		"No love lost between these two.",
+		"You know he felt that.",
+		"Ouch!",
+		"I can't believe it!"
+	]
 	
 	def self.pick_wrestler
 		wrestlers = []
@@ -49,6 +62,3 @@ module LawlerIpsum
 
 
 end
-
-
-puts LawlerIpsum.yet_better(30)
