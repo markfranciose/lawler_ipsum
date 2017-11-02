@@ -10,8 +10,12 @@ get '/text' do
 end
 
 get '/paragraphs/:number' do
-	p params
-	p number = params['number'].to_i
+	number = params['number'].to_i
 	LawlerIpsum.get_paragraph(number)
+end
+
+get '/sentences/:number' do
+	number = params['number'].to_i
+	LawlerIpsum.get_sentences(number)
 end
 

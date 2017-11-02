@@ -5,13 +5,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	generateButton.addEventListener("click", function(){
 		let xhr = new XMLHttpRequest();
-		let test = document.getElementById('test').value
-		xhr.open('GET', '/paragraphs/' + test);
+		let selected = document.querySelector("input[name='which-text']:checked").value
+		console.log(selected)
+		let number = document.getElementById(selected + '-number').value
+		console.log('/' + selected + '/' + number)
+		xhr.open('GET', '/' + selected + '/' + number);
 		xhr.send(null);
 		xhr.onreadystatechange = function() {
 		if (xhr.readyState === 4) {
 			showBox.value = xhr.responseText;
-			console.log("We in here!");
 		}	
 		}
 	})
