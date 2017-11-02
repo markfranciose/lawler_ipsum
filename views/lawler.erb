@@ -7,7 +7,13 @@
 		<h1>Lawler Ipsum</h1>
 
 		<div id="main-container">
-			<button id="generate-button">Generate paragraph</button>
+			<p>The best wrestling-related filler text generator there was, the best there is, and the best there ever will be.</p>
+			<form id="text-type-form">
+				<input type="radio" name="which-text" value="sentence" checked>Sentences: 
+				<input id="test" type="text" name="sentence-number" maxlength="2"><br>
+				<input type="radio" name="which-text" value="paragraph">Paragraphs<br>				
+			</form>
+			<button id="generate-button">Lay it on me, brother.</button>
 			<!---		<p><%= @paragraph %></p>		-->
 			<textarea id="show-box"></textarea>
 			<button id="copy-button">Copy to clipboard</button>

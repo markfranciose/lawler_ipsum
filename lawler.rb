@@ -41,7 +41,7 @@ module LawlerIpsum
 		moves.sample
 	end
 	
-	def self.yet_better(number)
+	def self.get_sentences(number = 5)
 		# add logic for the pick_wrestler being the same.
 		output = ""
 		number.times do
@@ -50,6 +50,17 @@ module LawlerIpsum
 			output += pick_wrestler + " "
 			output += "with a " + pick_move
 			output += "! "
+		end
+		output
+	end
+
+	def self.get_paragraph(number = 1)
+		output = ""
+		number.times do
+			rand(4..7).times do
+				output += get_sentences(1)
+			end
+			output += "\n\n"
 		end
 		output
 	end

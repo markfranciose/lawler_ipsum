@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", function(){
 	let copyButton = document.getElementById("copy-button")	
 
 	generateButton.addEventListener("click", function(){
-		console.log("OK, now this works");
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', '/text');
+		let test = document.getElementById('test').value
+		xhr.open('GET', '/paragraphs/' + test);
 		xhr.send(null);
 		xhr.onreadystatechange = function() {
 		if (xhr.readyState === 4) {
 			showBox.value = xhr.responseText;
+			console.log("We in here!");
 		}	
 		}
 	})
