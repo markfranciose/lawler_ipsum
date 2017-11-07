@@ -44,17 +44,20 @@ module LawlerIpsum
 	def self.get_sentences(number = 5)
 		# add logic for the pick_wrestler being the same.
 		output = ""
+		move = pick_move
 		number.times do
 			output += pick_wrestler + " "
 			output += @@verbs.sample + " "
 			output += pick_wrestler + " "
-			output += "with  " article(pick_move) + pick_move
+			output += "with #{article(move)} #{move}"
 			output += "! "
 		end
 		output
 	end
 
 	def self.article(word)
+		puts word
+		puts /^[aeiou]/.match(word)
 		/^[aeiou]/i =~ word ? "an" : "a" 
 	end
 
