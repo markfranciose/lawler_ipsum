@@ -23,6 +23,12 @@ module LawlerIpsum
 		"I can't believe it!"
 	]
 	
+=begin
+	def self.list_wrestlers
+		File.open(File.dirname(__FILE__) << '/wrestlers.txt')
+	end
+=end
+
 	def self.pick_wrestler
 		wrestlers = []
 		File.open(File.dirname(__FILE__) << '/wrestlers.txt').each_line do |line|

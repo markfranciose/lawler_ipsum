@@ -19,3 +19,8 @@ get '/sentences/:number' do
 	LawlerIpsum.get_sentences(number)
 end
 
+=begin
+get '/wrestlers' do
+	LawlerIpsum.list_wrestlers
+end
+=end 
