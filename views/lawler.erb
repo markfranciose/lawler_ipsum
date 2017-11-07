@@ -5,24 +5,29 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<div id="site-container">
 		<div id="site-top">
 			<h1>Lawler Ipsum</h1>
 			<h3>The best wrestling-related filler text generator there was, the best
 					there is, and the best there ever will be.</>
 		</div>
 		<div id="main-container">
-			<form id="text-type-form">
-				<input type="radio" name="which-text" value="sentences" checked>Sentences: 
-				<input id="sentences-number" type="text" name="sentences-number" maxlength="2"><br>
-				<input type="radio" name="which-text" value="paragraphs">Paragraphs<br>				
-				<input id="paragraphs-number" type="text" name="paragraphs-number" maxlength="2"><br>
-			</form>
-			<button id="generate-button">Lay it on me, brother.</button>
+			<div id="user-input">
+				<form id="text-type-form">
+					<h4>Pick something, jabroni.</h4>
+					<input type="radio" name="which-text" value="sentences" checked>Sentences: 
+					<input id="sentences-number" type="text" name="sentences-number" maxlength="2"><br>
+					<input type="radio" name="which-text" value="paragraphs">Paragraphs:<br>				
+					<input id="paragraphs-number" type="text" name="paragraphs-number" maxlength="2"><br>
+				</form>
+				<button class="button" id="generate-button">Lay it on me, brother.</button>
+			</div>
 			<!---		<p><%= @paragraph %></p>		-->
 			<textarea id="show-box"></textarea>
-			<button id="copy-button">Copy to clipboard</button>
+			<button class="button" id="copy-button">Copy to clipboard</button>
 		</div>		
 		<div id="site-foot">
+		</div>
 		</div>
 		<script src="lawler.js"></script>
 	</body>
