@@ -22,12 +22,37 @@ document.addEventListener("DOMContentLoaded", function(){
 			}	
 		}
 	})
+	
 
 	copyButton.addEventListener("click", function(){
 		showBox.select()	
 		document.execCommand('copy')
 		// unselect text 
 		window.getSelection().removeAllRanges();
+	})
+
+	// selecting and displaying only sentence or paragraph
+	let sentenceButton = document.getElementById("sentences-radio");
+	let sentenceNumber = document.getElementById("sentences-number");
+	let paragraphButton = document.getElementById("paragraphs-radio");
+	let paragraphNumber = document.getElementById("paragraphs-number")
+	
+	sentenceButton.addEventListener("click", function() {
+		paragraphNumber.value = "";
+	})
+	
+	sentenceNumber.addEventListener("click", function() {
+		sentenceButton.checked = true;
+		paragraphNumber.value = "";
+	})
+
+	paragraphButton.addEventListener("click", function() {
+		sentenceNumber.value = "";
+	})
+
+	paragraphNumber.addEventListener("click", function() {
+		paragraphButton.checked = true;
+		sentenceNumber.value = "";
 	})
 
 

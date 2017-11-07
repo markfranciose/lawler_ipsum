@@ -15,15 +15,17 @@
 			<div id="user-input">
 				<form id="text-type-form">
 					<h4>Pick something, jabroni.</h4>
-					<input type="radio" name="which-text" value="sentences" checked>Sentences: 
+					<input id="sentences-radio"type="radio" name="which-text" value="sentences" checked>Sentences: 
 					<input id="sentences-number" type="text" name="sentences-number" maxlength="2"><br>
-					<input type="radio" name="which-text" value="paragraphs">Paragraphs:<br>				
+					<input id="paragraphs-radio" type="radio" name="which-text" value="paragraphs">Paragraphs:<br>				
 					<input id="paragraphs-number" type="text" name="paragraphs-number" maxlength="2"><br>
 				</form>
 				<button class="button" id="generate-button">Lay it on me, brother.</button>
 			</div>
 			<!---		<p><%= @paragraph %></p>		-->
-			<textarea id="show-box"></textarea>
+			<div id="content">
+				<textarea id="show-box"></textarea>
+			</div>
 			<button class="button" id="copy-button">Copy to clipboard</button>
 		</div>		
 		<div id="site-foot">
