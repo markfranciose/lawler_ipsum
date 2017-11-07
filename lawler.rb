@@ -48,10 +48,14 @@ module LawlerIpsum
 			output += pick_wrestler + " "
 			output += @@verbs.sample + " "
 			output += pick_wrestler + " "
-			output += "with a " + pick_move
+			output += "with  " article(pick_move) + pick_move
 			output += "! "
 		end
 		output
+	end
+
+	def self.article(word)
+		/^[aeiou]/i =~ word ? "an" : "a" 
 	end
 
 	def self.get_paragraph(number = 1)
